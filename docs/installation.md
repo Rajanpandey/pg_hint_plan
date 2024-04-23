@@ -2,7 +2,7 @@
 
 This section describes the installation steps.
 
-## building binary module
+## Building binary module
 
 Simply run `make` at the top of the source tree, then `make install` as an
 appropriate user. The `PATH` environment variable should be set properly
@@ -27,5 +27,6 @@ postgres=# LOAD 'pg_hint_plan';
 LOAD
 ```
 
-Run `CREATE EXTENSION` and `SET pg_hint_plan.enable_hint_tables TO on` if you
-are planning to use the hint table.
+If you are planning to use the hint table, run:
+    CREATE EXTENSION pg_hint_plan;
+    SET pg_hint_plan.enable_hint_table TO on;
